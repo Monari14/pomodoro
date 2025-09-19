@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pomodoro - Sua Empresa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css"></head>
+<body>
+  <header class="app-header">
+    <img src="images/logo.png" alt="Logo Empresa" class="logo">
+    <h1 class="company-name">Pomodoro</h1>
+  </header>
+
+  <main>
+    <div class="timer" id="timer">25:00</div>
+
+    <div class="controls">
+      <button id="playPauseBtn">▶</button>
+      <button id="resetBtn">⏹</button>
+    </div>
+
+    <button id="toggleConfig" class="toggle-config">⚙️ Configurações</button>
+
+    <section class="config hidden" id="configSection">
+      <h2>Configurações</h2>
+
+      <div class="config-item">
+        <label>⏱ Tempo de foco</label>
+        <input type="number" id="focusTime" value="25" min="1"> min
+      </div>
+
+      <div class="config-item">
+        <label>☕ Tempo de pausa</label>
+        <input type="number" id="breakTime" value="5" min="1"> min
+      </div>
+
+      <div class="config-item">
+        <label>🖼 Fundo personalizado</label>
+        <input type="file" id="bgImageFile" accept="image/*">
+      </div>
+
+      <!-- Modal de edição de imagem -->
+      <div id="cropperModal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Corte sua imagem</h3>
+          <img id="cropperImage" src="" alt="Imagem para cortar">
+          <div class="modal-actions">
+            <button id="cropBtn">✅ Salvar Corte</button>
+            <button id="cancelCropBtn">❌ Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="bgPreview" class="bg-preview hidden"></div>
+        <button id="removeBgBtn" class="remove-btn hidden">🗑 Remover Fundo</button>
+        <button id="saveConfigBtn" class="save-btn">💾 Salvar</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

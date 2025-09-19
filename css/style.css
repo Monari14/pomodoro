@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.timer {
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  background: #b2a1e4;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.controls button:hover{
+  background: #c1b0f1;
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+.toggle-config {
+  display: block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.config {
+  margin-top: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.config-item {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.config-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"], input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+}
+
+.bg-preview {
+  margin-top: 10px;
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+}
+
+.save-btn, .remove-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #b2a1e4;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background: #c1b0f1;
+}
+
+.remove-btn {
+  background: #444;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background: #666;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
